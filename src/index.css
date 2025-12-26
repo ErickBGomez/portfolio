@@ -1,1 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Righteous&display=swap");
 @import "tailwindcss";
+
+@theme {
+  /* Font styles */
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Righteous", cursive;
+
+  /* Colors */
+  /* Primary tones */
+  --color-primary: #18b36d;
+  --color-primary-hover: #6ad0a2;
+  --color-primary-active: #2f9768;
+
+  /* Black tones */
+  --color-black-100: #1f2125;
+  --color-black-75: #1f2125bf;
+  --color-black-50: #1f212580;
+  --color-black-25: #1f212540;
+  --color-black-10: #1f21251a;
+  --color-black-05: #1f212509;
+
+  /* White tones */
+  --color-white-100: #fafafa;
+  --color-white-75: #fafafabf;
+  --color-white-50: #fafafa80;
+  --color-white-25: #fafafa40;
+  --color-white-10: #fafafa1a;
+  --color-white-05: #fafafa0d;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-black-100);
+    color: var(--color-white-100);
+  }
+}
