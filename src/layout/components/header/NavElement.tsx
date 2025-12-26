@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 type HeaderItemProps = {
   label: string;
@@ -15,7 +17,10 @@ const NavElement = ({ label, href }: HeaderItemProps) => {
       to={href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="px-6 py-6 font-display hover:text-primary transition-colors duration-300"
+      className={twMerge(
+        "px-6 py-6 font-display transition-colors duration-300",
+        clsx(isHovered && "text-primary")
+      )}
     >
       <div className="relative">
         <AnimatePresence>
