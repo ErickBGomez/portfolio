@@ -1,3 +1,5 @@
+import { FileText } from "lucide-react";
+import LinkButton from "../../../common/components/button/LinkButton";
 import NavElement from "./NavElement";
 
 const navElements = [
@@ -10,15 +12,16 @@ const navElements = [
 
 const Header = () => {
   return (
-    <div className="w-full p-6">
-      <div className="max-w-250 mx-auto">
+    <header className="w-full bg-black-100">
+      <div className="flex items-center justify-between gap-10 max-w-250 mx-auto pl-2 pr-8">
         <nav className="flex items-center justify-between">
           {navElements.map((element, index) => (
             <NavElement key={index} label={element.label} href={element.href} />
           ))}
         </nav>
+        <LinkButton href="/cv" label="Get CV" icon={<FileText />} />
       </div>
-    </div>
+    </header>
   );
 };
 
