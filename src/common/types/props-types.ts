@@ -6,3 +6,7 @@ export type GenericButtonProps = {
   variant?: "primary" | "secondary" | "transparent";
   className?: string;
 };
+
+export type IconProps = {
+  className?: string;
+};
