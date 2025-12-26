@@ -11,28 +11,36 @@ const NavElement = ({ label, href }: HeaderItemProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
+    <Link
+      to={href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative"
+      className="relative font-display hover:text-primary transition-colors duration-300"
     >
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence>
         {isHovered && (
           <motion.div
-            className="absolute translate-1/2 w-2 h-2 bg-primary rotate-45 rounded-[1.5px]"
-            initial={{ x: 0 }}
-            animate={{ x: -20 }}
-            exit={{ x: 0 }}
-          />
+            className="absolute top-[40%] left-0"
+            initial={{ x: 0, opacity: 0 }}
+            animate={{ x: -20, opacity: 1 }}
+            exit={{ x: 0, opacity: 0 }}
+          >
+            <div className="w-1.5 h-1.5 bg-primary rotate-45 rounded-[1.5px]" />
+          </motion.div>
+        )}
+        {isHovered && (
+          <motion.div
+            className="absolute top-[40%] right-0"
+            initial={{ x: 0, opacity: 0 }}
+            animate={{ x: 20, opacity: 1 }}
+            exit={{ x: 0, opacity: 0 }}
+          >
+            <div className="w-1.5 h-1.5 bg-primary rotate-45 rounded-[1.5px]" />
+          </motion.div>
         )}
       </AnimatePresence>
-      <Link
-        to={href}
-        className="font-display hover:text-primary transition-colors duration-300"
-      >
-        {label}
-      </Link>
-    </div>
+      <span>{label}</span>
+    </Link>
   );
 };
 
