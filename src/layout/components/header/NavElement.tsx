@@ -21,6 +21,7 @@ const NavElement = ({ label, href }: HeaderItemProps) => {
         <AnimatePresence>
           {isHovered && (
             <motion.div
+              key="diamond-left"
               className="absolute top-[40%] left-0"
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: -20, opacity: 1 }}
@@ -31,6 +32,7 @@ const NavElement = ({ label, href }: HeaderItemProps) => {
           )}
           {isHovered && (
             <motion.div
+              key="diamond-right"
               className="absolute top-[40%] right-0"
               initial={{ x: 0, opacity: 0 }}
               animate={{ x: 20, opacity: 1 }}
