@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="max-w-250 mx-auto flex flex-col items-center gap-4 py-25">
         <div className="flex flex-col items-center">
           <span>Designed and developed by</span>
-          <span className="font-display">Erick B. Gómez</span>
+          <span className="font-display text-body-display">Erick B. Gómez</span>
         </div>
         <Button label="Show credits and tools" variant="transparent" />
         <div className="flex items-center gap-3">

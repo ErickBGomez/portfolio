@@ -18,7 +18,7 @@ const NavElement = ({ label, href }: HeaderItemProps) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={twMerge(
-        "px-6 py-6 font-display transition-colors duration-300",
+        "px-6 py-6 font-display text-body-display transition-colors duration-300",
         clsx(isHovered && "text-primary")
       )}
     >

@@ -14,7 +14,7 @@ const Button = ({
   return (
     <button
       className={twMerge(
-        "font-display px-6 py-3 rounded-lg transition-colors duration-150 cursor-pointer",
+        "font-display text-body-display px-6 py-3 rounded-lg transition-colors duration-150 cursor-pointer",
         clsx(
           variant === "primary" &&
             "bg-primary text-black-100 hover:bg-primary-hover active:bg-primary-active",
