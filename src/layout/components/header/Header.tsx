@@ -12,7 +12,7 @@ const navElements = [
 
 const Header = () => {
   return (
-    <header className="w-full bg-black-100">
+    <header className="w-full">
       <div className="flex items-center justify-between max-w-250 mx-auto pl-2 pr-8">
         <nav className="flex items-center justify-between">
           {navElements.map((element, index) => (
