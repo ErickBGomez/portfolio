@@ -4,8 +4,8 @@ import Heading from "../../../../common/components/typography/Heading";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center gap-10">
-      <div className="flex flex-col items-center">
+    <section className="min-h-screen flex flex-col items-center justify-center gap-10">
+      <div className="text-center">
         <span className="font-display text-medium-body-display">
           Hello there! I'm
         </span>
@@ -14,7 +14,7 @@ const Hero = () => {
           Full-Stack Web Developer
         </span>
       </div>
-      <p>
+      <p className="max-w-110 text-center">
         Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
         Aliquam in hendrerit urna. Pellentesque sit amet sapien.
       </p>

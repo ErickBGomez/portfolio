@@ -8,6 +8,7 @@ const Heading = ({ level, text }: HeadingProps) => {
     <>
       {level === 1 && <h1 className="font-display text-heading-1">{text}</h1>}
       {level === 2 && <h2 className="font-display text-heading-2">{text}</h2>}
+      {/* TODO: Define more heading styles */}
       {level >= 6 && <h6 className="font-display text-heading-6">{text}</h6>}
     </>
   );
