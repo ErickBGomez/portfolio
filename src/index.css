@@ -2,11 +2,41 @@
 @import "tailwindcss";
 
 @theme {
-  /* Font styles */
+  /* 1. Font styles */
   --font-sans: "Montserrat", sans-serif;
   --font-display: "Righteous", cursive;
 
-  /* Colors */
+  /* Body text */
+  --text-body: 1rem; /* 16px */
+  --text-body--font-family: var(--font-sans);
+  --text-body--font-weight: 500;
+
+  /* Medium body text */
+  --text-medium-body: 1.25rem; /* 20px */
+  --text-medium-body--font-family: var(--font-sans);
+  --text-medium-body--font-weight: 500;
+
+  /* Small text */
+  --text-small: 0.75rem; /* 12px */
+  --text-small--font-family: var(--font-sans);
+  --text-small--font-weight: 400;
+
+  /* Heading 1 */
+  --text-heading-1: 5.61rem; /* 89.76px */
+  --text-heading-1--font-family: var(--font-display);
+  --text-heading-1--font-weight: 400;
+
+  /* Heading 2 */
+  --text-heading-2: 4.209rem; /* 67.34px */
+  --text-heading-2--font-family: var(--font-display);
+  --text-heading-2--font-weight: 400;
+
+  /* Heading 3 */
+  --text-heading-3: 3.157rem; /* 50.51px */
+  --text-heading-3--font-family: var(--font-display);
+  --text-heading-3--font-weight: 400;
+
+  /* 2. Colors */
   /* Primary tones */
   --color-primary: #18b36d;
   --color-primary-hover: #6ad0a2;
@@ -32,8 +62,7 @@
 @layer base {
   body {
     background-color: var(--color-black-100);
-    font-family: var(--font-sans);
-    font-weight: 500;
+    @apply text-body;
     color: var(--color-white-100);
   }
 }
