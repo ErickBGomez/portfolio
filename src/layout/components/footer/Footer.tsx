@@ -1,5 +1,10 @@
-import Button from "../button/Button";
-import { Github, Instagram, LinkedIn, X } from "../icons/Icons";
+import Button from "../../../common/components/button/Button";
+import {
+  Github,
+  Instagram,
+  LinkedIn,
+  X,
+} from "../../../common/components/icons/Icons";
 
 // Icon obtained from devicons: https://devicon.dev/
 const Footer = () => {
